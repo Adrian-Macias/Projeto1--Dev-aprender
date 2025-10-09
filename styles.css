@@ -1,0 +1,312 @@
+:root {
+  --cor-primaria: #154360;
+  --cor-secundaria: #1abc9c;
+  --cor-fundo: #f6f9fc;
+  --cor-texto: #2c3e50;
+  --cor-claro: #ffffff;
+  --cor-destaque: #f1c40f;
+  --sombra: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+  line-height: 1.6;
+}
+
+.container {
+  width: min(1100px, 90vw);
+  margin: 0 auto;
+}
+
+.topo {
+  position: sticky;
+  top: 0;
+  background: var(--cor-claro);
+  box-shadow: var(--sombra);
+  z-index: 10;
+}
+
+.topo .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 0;
+}
+
+.topo h1 {
+  font-size: 1.6rem;
+  color: var(--cor-primaria);
+  letter-spacing: 1px;
+}
+
+.topo nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.topo nav a {
+  color: var(--cor-texto);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.topo nav a:hover {
+  color: var(--cor-secundaria);
+}
+
+.hero {
+  padding: 5rem 0 4rem;
+  background: linear-gradient(135deg, var(--cor-primaria), #0b2c3f);
+  color: var(--cor-claro);
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: 0 auto 2rem;
+}
+
+.botao {
+  background: var(--cor-secundaria);
+  color: var(--cor-claro);
+  text-decoration: none;
+  padding: 0.9rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 700;
+  box-shadow: var(--sombra);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.botao:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+.secao {
+  padding: 4rem 0;
+}
+
+.secao h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--cor-primaria);
+}
+
+.secao .descricao {
+  margin-bottom: 2rem;
+  color: rgba(44, 62, 80, 0.8);
+}
+
+.destaque-claro {
+  background: var(--cor-claro);
+}
+
+.destaques {
+  list-style: none;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-top: 2rem;
+}
+
+.destaques li {
+  background: var(--cor-claro);
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: var(--sombra);
+  border-top: 4px solid var(--cor-secundaria);
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card {
+  background: var(--cor-claro);
+  border-radius: 18px;
+  padding: 1.8rem;
+  box-shadow: var(--sombra);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-height: 260px;
+}
+
+.card h4 {
+  font-size: 1.3rem;
+  color: var(--cor-primaria);
+}
+
+.lista-simples {
+  list-style: disc;
+  padding-left: 1.2rem;
+}
+
+.formulario {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.formulario input,
+.formulario textarea,
+.formulario button,
+.card-formulario input,
+.card-formulario textarea,
+.card-formulario button {
+  font: inherit;
+}
+
+.formulario input,
+.card-formulario input,
+.card-formulario textarea {
+  flex: 1;
+  min-width: 180px;
+  padding: 0.75rem;
+  border: 1px solid rgba(21, 67, 96, 0.2);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.formulario button,
+.card-formulario button {
+  background: var(--cor-secundaria);
+  color: var(--cor-claro);
+  border: none;
+  border-radius: 10px;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.formulario button:hover,
+.card-formulario button:hover {
+  filter: brightness(0.95);
+  transform: translateY(-1px);
+}
+
+.lista-tarefas {
+  list-style: none;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.item-tarefa {
+  background: var(--cor-claro);
+  border-radius: 12px;
+  padding: 0.9rem 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--sombra);
+}
+
+.item-tarefa label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+}
+
+.item-tarefa input[type="checkbox"] {
+  accent-color: var(--cor-secundaria);
+  width: 18px;
+  height: 18px;
+}
+
+.item-tarefa button {
+  background: transparent;
+  border: none;
+  color: #e74c3c;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.item-tarefa.concluida {
+  opacity: 0.6;
+  text-decoration: line-through;
+}
+
+.card-evento .data {
+  font-weight: 700;
+  color: var(--cor-secundaria);
+}
+
+.card-evento .local {
+  font-size: 0.95rem;
+  color: rgba(44, 62, 80, 0.8);
+}
+
+.contato-grid {
+  align-items: flex-start;
+}
+
+.card-formulario {
+  background: var(--cor-claro);
+  box-shadow: var(--sombra);
+  border-radius: 18px;
+  padding: 2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.card-formulario label {
+  font-weight: 600;
+}
+
+.card-formulario textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.feedback {
+  font-size: 0.9rem;
+  color: var(--cor-secundaria);
+  min-height: 1.2rem;
+}
+
+.rodape {
+  background: #0b2c3f;
+  color: var(--cor-claro);
+  padding: 1.5rem 0;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+@media (max-width: 720px) {
+  .topo .container {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .topo nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .formulario input,
+  .card-formulario input,
+  .card-formulario textarea {
+    width: 100%;
+  }
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestão de Time</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topo">
+    <div class="container">
+      <h1>Meu Time Imbatível</h1>
+      <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#equipe">Equipe</a>
+        <a href="#tarefas">Tarefas</a>
+        <a href="#calendario">Calendário</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h2>Organize e motive o seu time em um só lugar.</h2>
+        <p>
+          Defina objetivos, registre presença, acompanhe tarefas e mantenha a comunicação alinhada
+          com esta página simples e gratuita.
+        </p>
+        <a class="botao" href="#tarefas">Começar agora</a>
+      </div>
+    </section>
+
+    <section id="sobre" class="secao container">
+      <h3>Sobre o projeto</h3>
+      <p>
+        Este site foi criado para ajudar treinadores, líderes e responsáveis por equipes a organizarem
+        as rotinas de treino e competição. Edite os cartões conforme a necessidade do seu time e
+        compartilhe o link com os participantes.
+      </p>
+      <ul class="destaques">
+        <li>
+          <h4>Objetivos</h4>
+          <p>Estabeleça metas semanais e acompanhe a evolução do grupo.</p>
+        </li>
+        <li>
+          <h4>Comunicação</h4>
+          <p>Centralize avisos importantes e mantenha todos informados.</p>
+        </li>
+        <li>
+          <h4>Motivação</h4>
+          <p>Reconheça os destaques do time e fortaleça o espírito de equipe.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="equipe" class="secao destaque-claro">
+      <div class="container">
+        <h3>Time titular</h3>
+        <p class="descricao">Edite a lista com os nomes e funções de cada integrante.</p>
+        <div class="grid">
+          <div class="card">
+            <h4>Técnico</h4>
+            <p>Responsável pela estratégia, treinos e escalações.</p>
+            <ul id="lista-tecnico" class="lista-simples">
+              <li>Alex Silva</li>
+            </ul>
+            <div class="formulario">
+              <input type="text" placeholder="Adicionar treinador" data-lista="lista-tecnico" />
+              <button type="button">Adicionar</button>
+            </div>
+          </div>
+          <div class="card">
+            <h4>Jogadores</h4>
+            <p>Mantenha o elenco atualizado com posição e número.</p>
+            <ul id="lista-jogadores" class="lista-simples">
+              <li>Camila (Capitã)</li>
+              <li>Rafa</li>
+              <li>João</li>
+            </ul>
+            <div class="formulario">
+              <input type="text" placeholder="Adicionar jogador" data-lista="lista-jogadores" />
+              <button type="button">Adicionar</button>
+            </div>
+          </div>
+          <div class="card">
+            <h4>Suporte</h4>
+            <p>Quem cuida da logística, primeiros socorros e apoio geral.</p>
+            <ul id="lista-suporte" class="lista-simples">
+              <li>Patrícia - Fisioterapeuta</li>
+            </ul>
+            <div class="formulario">
+              <input type="text" placeholder="Adicionar membro de suporte" data-lista="lista-suporte" />
+              <button type="button">Adicionar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tarefas" class="secao container">
+      <h3>Plano de tarefas</h3>
+      <p class="descricao">Liste atividades importantes e marque as concluídas.</p>
+      <form id="form-tarefas" class="formulario">
+        <input id="nova-tarefa" type="text" placeholder="Adicionar nova tarefa" />
+        <button type="submit">Salvar tarefa</button>
+      </form>
+      <ul id="lista-tarefas" class="lista-tarefas"></ul>
+    </section>
+
+    <section id="calendario" class="secao destaque-claro">
+      <div class="container">
+        <h3>Próximos eventos</h3>
+        <div class="grid">
+          <article class="card card-evento">
+            <h4>Treino tático</h4>
+            <p class="data">Quarta-feira · 19h</p>
+            <p class="local">Quadra Municipal</p>
+            <p>Foco em bolas paradas e posicionamento defensivo.</p>
+          </article>
+          <article class="card card-evento">
+            <h4>Amistoso contra Tigres FC</h4>
+            <p class="data">Sábado · 16h</p>
+            <p class="local">Estádio Central</p>
+            <p>Levar documento e uniforme completo.</p>
+          </article>
+          <article class="card card-evento">
+            <h4>Reunião da comissão</h4>
+            <p class="data">Domingo · 10h</p>
+            <p class="local">Sala de vídeo</p>
+            <p>Revisão dos indicadores de desempenho da semana.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="secao container">
+      <h3>Central de comunicação</h3>
+      <div class="grid contato-grid">
+        <div>
+          <h4>Mensagens importantes</h4>
+          <ul class="lista-simples">
+            <li>Enviar relatórios de treino até sexta-feira.</li>
+            <li>Atualizar a lista de presença no fim de cada sessão.</li>
+            <li>Registrar feedback dos atletas semanalmente.</li>
+          </ul>
+        </div>
+        <form class="card-formulario">
+          <h4>Enviar aviso rápido</h4>
+          <label for="nome">Nome</label>
+          <input id="nome" type="text" placeholder="Seu nome" required />
+
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" placeholder="Digite o aviso"></textarea>
+
+          <button type="button" id="botao-aviso">Copiar mensagem</button>
+          <p id="feedback" class="feedback" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <p>Personalize este site conforme o seu time e compartilhe com a equipe.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
